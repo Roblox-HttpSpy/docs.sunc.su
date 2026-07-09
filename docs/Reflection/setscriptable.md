@@ -27,11 +27,9 @@ function setscriptable(instance: Instance, property_name: string, state: boolean
 ## Example
 
 ```luau title="Temporarily enabling scriptability of a property" linenums="1"
-local part = Instance.new("Part")
+setscriptable(workspace, "SignalBehavior", true)
+print(workspace.SignalBehavior) -- Output:  Enum.SignalBehavior...
 
-setscriptable(part, "BottomParamA", true)
-print(part.BottomParamA) -- Output: -0.5
-
-setscriptable(part, "BottomParamA", false)
-print(part.BottomParamA) -- Throws an error
+setscriptable(part, "SignalBehavior", false)
+print(workspace.SignalBehavior) -- Throws an error
 ```
