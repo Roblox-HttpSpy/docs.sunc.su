@@ -22,9 +22,9 @@ function isscriptable(object: Instance, property: string): boolean | nil
 ## Example
 
 ```luau title="Checking the scriptability of a property" linenums="1"
-local part = Instance.new("Part")
+local folder = Instance.new("Folder")
 
-setscriptable(part, "BottomParamA", false)
+setscriptable(folder, "Name", false)
 
-print(isscriptable(part, "BottomParamA")) -- false
+print(isscriptable(folder, "Name")) -- false
 ```
