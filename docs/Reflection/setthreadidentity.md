@@ -24,4 +24,4 @@ print(pcall(function() return game.CoreGui end)) -- Output: false (restricted ac
 
 setthreadidentity(8)
 print(pcall(function() return game.CoreGui end)) -- Output: true Instance
-```
+``
