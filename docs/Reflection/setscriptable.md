@@ -30,6 +30,6 @@ function setscriptable(instance: Instance, property_name: string, state: boolean
 setscriptable(workspace, "SignalBehavior", true)
 print(workspace.SignalBehavior) -- Output:  Enum.SignalBehavior...
 
-setscriptable(part, "SignalBehavior", false)
+setscriptable(workspace, "SignalBehavior", false)
 print(workspace.SignalBehavior) -- Throws an error
 ```
