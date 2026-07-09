@@ -25,7 +25,7 @@ function sethiddenproperty(instance: Instance, property_name: string, property_v
 ## Example
 
 ```luau title="Setting a hidden property value" linenums="1"
-local folder = Instance.new("folder")
+local folder = Instance.new("Folder")
 
 print(gethiddenproperty(folder, "IsInSandbox")) -- Output: false, true
 
