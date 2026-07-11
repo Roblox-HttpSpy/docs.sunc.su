@@ -24,7 +24,7 @@ function getinstances(): { Instance }
 local dummy_part = Instance.new("Part")
 dummy_part.Parent = nil
 
-for _, instance in pairs(getinstances()) do
+for _, instance in getinstances() do
     if instance == dummy_part then
         print("Found the dummy part!")
     end
