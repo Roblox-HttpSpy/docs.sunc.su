@@ -9,7 +9,7 @@
 `#!luau clonefunction` creates and returns a new function that has the exact same behaviour as the passed function.
 
 ```luau
-function clonefunction<A..., R...>(functionToClone: (A...) -> R...): (A...) -> R...
+function clonefunction<A..., R...>(functionToClone: (A...) -> (R...)): (A...) -> (R...)
 ```
 
 ## Parameters
