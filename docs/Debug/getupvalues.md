@@ -33,7 +33,7 @@ local function dummy_function()
     var2 ..= ", hello"
 end
 
-for index, value in pairs(debug.getupvalues(dummy_function)) do
+for index, value in debug.getupvalues(dummy_function) do
     print(index, value)
 end
 
