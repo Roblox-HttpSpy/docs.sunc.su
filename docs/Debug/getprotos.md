@@ -33,7 +33,7 @@ local function DummyFunction0()
     local function DummyFunction2() end
 end
 
-for index, proto in pairs(debug.getprotos(DummyFunction0)) do
+for index, proto in debug.getprotos(DummyFunction0) do
     print(index, debug.info(proto, "n"))
 end
 
