@@ -26,7 +26,7 @@ function getrunningscripts(): { BaseScript | ModuleScript }
 local running = game.Players.LocalPlayer.Character:FindFirstChild("Animate")
 local inactive = Instance.new("LocalScript") -- Not running because no bytecode to run
 
-for _, script in pairs(getrunningscripts()) do
+for _, script in getrunningscripts() do
     if script == running then
         print("Found the running Animate script.")
     elseif script == inactive then
