@@ -19,14 +19,12 @@ function gethui(): BasePlayerGui | Folder
 ```luau title="Creating undetectable UI in gethui" linenums="1"
 local hui = gethui() :: (BasePlayerGui | Folder)
 
-local gui = Instance.new("ScreenGui")
-gui.Parent = hui
+local gui = Instance.new("ScreenGui", hui)
 gui.Name = "GUI"
 
-local label = Instance.new("TextLabel")
+local label = Instance.new("TextLabel", gui)
 label.Size = UDim2.fromOffset(200, 50)
 label.Text = "Hello from gethui!"
-label.Parent = gui
 
 print(hui:FindFirstChild("GUI")) -- Output: GUI
 ```
