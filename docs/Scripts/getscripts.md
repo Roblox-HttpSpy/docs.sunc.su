@@ -22,7 +22,7 @@ function getscripts(): { BaseScript | ModuleScript }
 local dummy_script = Instance.new("LocalScript")
 dummy_script.Name = "TestScript"
 
-for _, script in pairs(getscripts()) do
+for _, script in getscripts() do
     if script == dummy_script then
         print("Found the dummy script!")
     end
