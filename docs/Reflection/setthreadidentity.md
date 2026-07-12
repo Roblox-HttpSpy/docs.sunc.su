@@ -19,16 +19,9 @@ function setthreadidentity(id: number): ()
 ## Example
 
 ```luau title="Changing thread identity for privileged access" linenums="1"
-local function get_coregui()
-	if game:GetService("CoreGui") then
-		return true, game:FindService("CoreGui")
-	end
-	return false, nil
-end
-
 setthreadidentity(2)
-print(GetCoreGui()) -- false, nil
+print(game:GetService("CoreGui")) -- nil
 
 setthreadidentity(8)
-print(GetCoreGui()) -- true, CoreGui
+print(game:GetService("CoreGui")) -- CoreGui
 ```
