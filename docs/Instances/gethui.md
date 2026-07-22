@@ -20,8 +20,8 @@ function gethui(): BasePlayerGui | Folder
 local hui = gethui() :: (BasePlayerGui | Folder)
 
 local gui = Instance.new("ScreenGui")
-gui.Parent = hui
 gui.Name = "GUI"
+gui.Parent = hui
 
 local label = Instance.new("TextLabel")
 label.Size = UDim2.fromOffset(200, 50)

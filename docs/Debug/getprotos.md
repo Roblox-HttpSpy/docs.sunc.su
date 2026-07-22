@@ -28,16 +28,16 @@ function debug.getprotos(func: (...any) -> (...any) | number): { (...any) -> (..
 ## Example
 
 ```luau title="Getting nested function prototypes" linenums="1"
-local function DummyFunction0()
-    local function DummyFunction1() end
-    local function DummyFunction2() end
+local function dummy_function()
+    local function dummy_function_1() end
+    local function dummy_function_2() end
 end
 
-for index, proto in pairs(debug.getprotos(DummyFunction0)) do
+for index, proto in debug.getprotos(dummy_function) do
     print(index, debug.info(proto, "n"))
 end
 
 -- Output:
--- 1 DummyFunction1
--- 2 DummyFunction2
+-- 1 dummy_function_1
+-- 2 dummy_function_2
 ```

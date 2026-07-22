@@ -18,7 +18,7 @@ function getnilinstances(): { Instance }
 
 ```luau title="Detecting a detached part" linenums="1"
 local part = Instance.new("Part")
-for _, instance in pairs(getnilinstances()) do
+for _, instance in getnilinstances() do
     if instance == part then
         print("Found our unattached part!")
     end

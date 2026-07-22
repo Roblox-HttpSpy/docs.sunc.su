@@ -29,7 +29,7 @@ local not_loaded = Instance.new("ModuleScript")
 
 pcall(require, loaded)
 
-for _, module in pairs(getloadedmodules()) do
+for _, module in getloadedmodules() do
     if module == loaded then
         -- The first modulescript was found because it was required in line 4
         print("Found loaded module!")

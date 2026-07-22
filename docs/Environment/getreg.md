@@ -25,7 +25,7 @@ end)
 
 task.wait(0.2) -- Let the loop run for a bit
 
-for _, value in pairs(getreg()) do
+for _, value in getreg() do
     if value ~= loop_thread then continue end
     
     print(`Found loop thread: {loop_thread}`) -- Should print

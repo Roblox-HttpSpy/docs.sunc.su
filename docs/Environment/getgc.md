@@ -32,7 +32,7 @@ local dummy_table = {}
 local function dummy_function() end
 task.wait(0.05) -- Step a bit
 
-for _, value in pairs(getgc()) do
+for _, value in getgc() do
     if value == dummy_function then
         print(`Found function: {dummy_function}`)
     elseif value == dummy_table then
@@ -48,7 +48,7 @@ local dummy_table = {}
 local function dummy_function() end
 task.wait(0.05) -- Step a bit
 
-for _, value in pairs(getgc(true)) do
+for _, value in getgc(true) do
     if value == dummy_function then
         print(`Found function: {dummy_function}`) -- Should print
     elseif value == dummy_table then

@@ -27,9 +27,9 @@ function sethiddenproperty(instance: Instance, property_name: string, property_v
 ```luau title="Setting a hidden property value" linenums="1"
 local part = Instance.new("Part")
 
-print(gethiddenproperty(part, "DataCost")) -- Output: 20, true
+print(gethiddenproperty(part, "IsInSandbox")) -- Output: false, true
 
-sethiddenproperty(part, "DataCost", 100)
+sethiddenproperty(part, "IsInSandbox", true)
 
-print(gethiddenproperty(part, "DataCost")) -- Output: 100, true
+print(gethiddenproperty(part, "IsInSandbox")) -- Output: true, true
 ```

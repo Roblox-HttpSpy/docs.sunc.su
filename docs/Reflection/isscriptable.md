@@ -24,7 +24,7 @@ function isscriptable(object: Instance, property: string): boolean | nil
 ```luau title="Checking the scriptability of a property" linenums="1"
 local part = Instance.new("Part")
 
-setscriptable(part, "BottomParamA", false)
+setscriptable(part, "Name", false)
 
-print(isscriptable(part, "BottomParamA")) -- false
+print(isscriptable(part, "Name")) -- false
 ```
